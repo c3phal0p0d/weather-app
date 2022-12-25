@@ -6,9 +6,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="main.js" defer></script>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Weather App</title>
 </head>
 <body>
-    
+    <div id="content">
+        <div id="search-bar-container">
+            <input id="search-bar" type="text" placeholder="Search for city...">
+        </div>
+        <div id="today-forecast-container">
+            <div id="today-forecast">
+                <div id="location-data">
+                    <h1 class="city-name"> City of Doom</h1>
+                </div>
+                <div id="weather-data-container">
+                    <div id="temperature-container">
+                        <div id="current-weather">
+                            <h1 class="current-temperature">100 ˚C</h1>
+                            <h2 class="descriptor">Apocalypse</h2>
+                        </div>
+                        <div id="forecast-weather">
+                            <div class="max">200 ˚C</div>
+                            <div class="min">-200 ˚C</div>
+                        </div>
+                    </div>
+                    <div id="additional-data-container">
+                        <div class="data feels-like">
+                            <span class="material-symbols-outlined">thermometer</span>
+                            <span class="text">Feels like: 0˚C</span>
+                        </div>
+                        <div class="data humidity">
+                            <span class="material-symbols-outlined">water_drop</span>
+                            <span class="text">Humidity: 150%</span>
+                        </div>
+                        <div class="data chance-of-rain">
+                            <span class="material-symbols-outlined">rainy</span>
+                            <span class="text">Chance of rain: 0%</span>
+                        </div>
+                        <div class="data wind-speed">
+                            <span class="material-symbols-outlined">air</span>
+                            <span class="text">Wind speed: 300km/h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="week-forecast">
+            <h2>Next 7 days</h2>
+            <div id="days-container">
+                <div class="day-forecast" data-day-id="0">
+                    <h3 class="day-of-week">Mon</h3>
+                    <div class="weather-symbol">
+                        <span class="material-symbols-outlined md-48">
+                            thunderstorm
+                        </span>
+                    </div>
+                    <div class="temperature-container">
+                        <div class="max">200 ˚C</div>
+                        <div class="min"> -200 ˚C</div>
+                    </div>
+                </div>
+                <div class="day-forecast" data-day-id="0">
+                    <h3 class="day-of-week">Mon</h3>
+                    <div class="weather-symbol">
+                        <span class="material-symbols-outlined md-48">
+                            thunderstorm
+                        </span>
+                    </div>
+                    <div class="temperature-container">
+                        <div class="max">200 ˚C</div>
+                        <div class="min"> -200 ˚C</div>
+                    </div>
+                </div>
+                <div class="day-forecast" data-day-id="0">
+                    <h3 class="day-of-week">Mon</h3>
+                    <div class="weather-symbol">
+                        <span class="material-symbols-outlined md-48">
+                            thunderstorm
+                        </span>
+                    </div>
+                    <div class="temperature-container">
+                        <div class="max">200 ˚C</div>
+                        <div class="min"> -200 ˚C</div>
+                    </div>
+                </div>
+                <div class="day-forecast" data-day-id="0">
+                    <h3 class="day-of-week">Mon</h3>
+                    <div class="weather-symbol">
+                        <span class="material-symbols-outlined md-48">
+                            thunderstorm
+                        </span>
+                    </div>
+                    <div class="temperature-container">
+                        <div class="max">200 ˚C</div>
+                        <div class="min"> -200 ˚C</div>
+                    </div>
+                </div>
+                <div class="day-forecast" data-day-id="0">
+                    <h3 class="day-of-week">Mon</h3>
+                    <div class="weather-symbol">
+                        <span class="material-symbols-outlined md-48">
+                            thunderstorm
+                        </span>
+                    </div>
+                    <div class="temperature-container">
+                        <div class="max">200 ˚C</div>
+                        <div class="min"> -200 ˚C</div>
+                    </div>
+                </div>
+                <div class="day-forecast" data-day-id="0">
+                    <h3 class="day-of-week">Mon</h3>
+                    <div class="weather-symbol">
+                        <span class="material-symbols-outlined md-48">
+                            thunderstorm
+                        </span>
+                    </div>
+                    <div class="temperature-container">
+                        <div class="max">200 ˚C</div>
+                        <div class="min"> -200 ˚C</div>
+                    </div>
+                </div>
+                <div class="day-forecast" data-day-id="0">
+                    <h3 class="day-of-week">Mon</h3>
+                    <div class="weather-symbol">
+                        <span class="material-symbols-outlined md-48">
+                            thunderstorm
+                        </span>
+                    </div>
+                    <div class="temperature-container">
+                        <div class="max">200 ˚C</div>
+                        <div class="min"> -200 ˚C</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
