@@ -42,6 +42,7 @@ body {
     border: none;
     border-bottom: 3px solid rgb(205, 122, 80);
     padding: 10px;
+    font-family: 'Hanken Grotesk', sans-serif;
 }
 
 #search-bar:focus{
@@ -95,16 +96,16 @@ h2 {
     padding: 10px 15px;
 }
 
-.city-name {
+#city-name {
     font-size: 2.5rem;
 }
 
-.current-temperature {
+#current-temperature {
     font-size: 5rem;
 }
 
 #week-forecast {
-    margin: 3% 1.25%;
+    margin: 1.25% 1.25%;
 }
 
 #week-forecast h2 {
@@ -122,11 +123,11 @@ h2 {
 .day-forecast {
     font-size: 1rem;
     border-bottom: 3px solid rgb(205, 122, 80);
-    width: 10%;
-    padding: 0px 15px;
-    margin: 0 1%;
+    width: 15%;
+    padding: 0px 5px;
+    margin: 0 2%;
     color: rgb(255, 238, 196);
-    background-color: rgba(0, 25, 56, 0.336);
+    background-color: rgba(0, 25, 56, 0.386);
     padding-bottom: 10px;
 }
 
@@ -141,9 +142,13 @@ h2 {
 .temperature-container {
     display: flex;
     justify-content: center;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
 }
 
 .temperature-container > div {
-    padding: 7%;
+    padding: 8.5%;
+}
+
+.min {
+    opacity: 65%;
 }
