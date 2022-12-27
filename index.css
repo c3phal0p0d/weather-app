@@ -3,7 +3,6 @@
 
 html, body {
     margin: 0px;
-    padding: 0px;
     min-height: 100%;
 }
 
@@ -16,6 +15,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding: 20px 0px;
 }
 
 .material-symbols-outlined {
@@ -34,6 +34,7 @@ body {
 #search-bar-container {
     text-align: right;
     padding: 20px;
+    padding-top: 5px;
 }
 
 #search-bar {
@@ -43,6 +44,7 @@ body {
     border-bottom: 3px solid rgb(205, 122, 80);
     padding: 10px;
     font-family: 'Hanken Grotesk', sans-serif;
+    width: 220px;
 }
 
 #search-bar:focus{
@@ -61,10 +63,12 @@ h2 {
 
 #today-forecast {
     margin: 0 20%;
+    
 }
 
 #weather-data-container {
     display: flex;
+    flex-direction: row;;
     align-items: center;
 }
 
@@ -87,65 +91,55 @@ h2 {
     vertical-align: middle;
 }
 
-#forecast-weather {
-    display: flex;
-    justify-content: center;
-}
-
-#forecast-weather > div {
-    padding: 10px 15px;
-}
-
 #city-name {
     font-size: 2.5rem;
+    margin-bottom: 15px;
 }
 
 #current-temperature {
     font-size: 5rem;
 }
 
-#week-forecast {
+#hour-forecast {
     margin: 1.25% 1.25%;
 }
 
-#week-forecast h2 {
+#next-24-hours-forecast {
+    margin-top: 30px;
+}
+
+#next-24-hours-forecast h2 {
     text-align: left;
     color: rgb(255, 238, 196);
     margin-left: 1.25%;
     padding-bottom: 25px;
 }
 
-#days-container {
+#hours-container {
     display: flex;
     justify-content: center;
 }
 
-.day-forecast {
-    font-size: 1rem;
+.hour-forecast {
+
     border-bottom: 3px solid rgb(205, 122, 80);
-    width: 15%;
+    width: 20%;
     padding: 0px 5px;
-    margin: 0 2%;
+    margin: 0 1%;
     color: rgb(255, 238, 196);
     background-color: rgba(0, 25, 56, 0.386);
     padding-bottom: 10px;
 }
 
-.day-forecast > .day-of-week {
+.hour-forecast > .hour {
     padding-bottom: 10px;
 }
 
-.day-forecast > div {
+.hour-forecast > div {
     padding-bottom: 20px;
 }
 
-.temperature-container {
-    display: flex;
-    justify-content: center;
-    font-size: 0.75rem;
-}
-
-.temperature-container > div {
+.temperature {
     padding: 8.5%;
 }
 
