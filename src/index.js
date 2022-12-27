@@ -12,7 +12,7 @@ async function fetchAndDisplayWeatherData(){
     const currentWeatherData = weatherData.currentWeather(data);
     view.displayCurrentWeather(currentWeatherData);
 
-    data = await weatherData.fetchData("next24hours", "metric", "melbourne,au");
+    data = await weatherData.fetchData("next24hours", "metric", location);
     const next24HoursForecastData = weatherData.next24HoursForecast(data);
     view.display24HourForecast(next24HoursForecastData);
 }
