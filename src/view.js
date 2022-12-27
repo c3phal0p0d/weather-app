@@ -1,5 +1,6 @@
 export function display24HourForecast(data) {
     const hoursContainer = document.querySelector("#hours-container");
+    hoursContainer.innerHTML = "";
     for (let i=0; i<8; i++){
         const hourForecast = document.createElement("div");
         hourForecast.classList.add("hour-forecast");

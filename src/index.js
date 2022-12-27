@@ -1,8 +1,10 @@
 import * as view from './view';
 import * as weatherData from './weatherData';
 
-async function main(){
-    let data = await weatherData.fetchData("current", "metric", "melbourne,au");
+let location = "melbourne,au";
+
+async function fetchAndDisplayWeatherData(){
+    let data = await weatherData.fetchData("current", "metric", location);
 
     const locationData = weatherData.location(data);
     view.displayLocation(locationData);
@@ -15,4 +17,11 @@ async function main(){
     view.display24HourForecast(next24HoursForecastData);
 }
 
-main();
+fetchAndDisplayWeatherData();
+
+const searchInput = document.querySelector('.input');
+const searchButton = document.querySelector('#search-button');
+searchButton.addEventListener("click", (e) => {
+    location = searchInput.value;
+    fetchAndDisplayWeatherData();
+});

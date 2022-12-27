@@ -11,7 +11,7 @@ body {
     color: rgb(0, 37, 83);
     text-align: center;
     font-family: 'Hanken Grotesk', sans-serif;
-    background-image: url('images/background-image.jpg');
+    background-image: url('./images/background-image.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -49,6 +49,16 @@ body {
 
 #search-bar:focus{
     outline: none;
+}
+
+#search-button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: rgb(0, 37, 83);
+}
+
+#search-button:active {
+    color: rgba(0, 37, 83, 0.514);
 }
 
 h1 {
