@@ -62,7 +62,6 @@ function getWeatherSymbol(weatherIcon){
 export const currentWeather = (data) => {
     let weatherDescriptor = (data.weather[0].description);
     weatherDescriptor = weatherDescriptor.charAt(0).toUpperCase() + weatherDescriptor.slice(1);
-    //const weatherSymbol = getWeatherSymbol(data.weather[0].icon);
     const currentTemperature = Math.round(data.main.temp);
 
     const feelsLike = Math.round(data.main.feels_like);
@@ -72,10 +71,28 @@ export const currentWeather = (data) => {
     return {weatherDescriptor, currentTemperature, feelsLike, humidity, windSpeed};
 }
 
-function parseHour(datetime){
-    const re = /\d{2}:\d{2}:\d{2}/;
-    const time = datetime.match(re)[0];
-    return parseInt(time.substr(0,2));
+function convertToLocalTimezone(dt, timezone){
+    const datetime = new Date(dt * 1000);
+    
+    const localTime = datetime.getTime();
+    const localOffset = datetime.getTimezoneOffset() * 60000;
+    const utc = localTime + localOffset;
+
+    const convertedDate = new Date(utc + (timezone * 1000));
+
+    return convertedDate;
+    
+}
+
+function getHour(dt, timezone){
+    const local_dt = convertToLocalTimezone(dt, timezone);
+    let hour = local_dt.getHours();
+    let minute = local_dt.getMinutes();
+    if (minute>30){
+        hour += 1;
+    }
+
+    return hour;
 }
 
 function convertFom24HourTo12HourTime(hour){
@@ -94,7 +111,7 @@ function convertFom24HourTo12HourTime(hour){
 }
 
 const getHourForecast = (data, id) => {
-    const hour = convertFom24HourTo12HourTime(parseHour(data.list[id].dt_txt));
+    const hour = convertFom24HourTo12HourTime(getHour(data.list[id].dt, data.city.timezone));
     const forecastTemperature = Math.round(data.list[id].main.temp);
     const weatherSymbol = getWeatherSymbol(data.list[id].weather[0].icon);
 
